@@ -1,0 +1,1549 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Will You Be Mine? ❤️</title>
+
+    <style>
+        
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+/* =========================
+   MAIN BACKGROUND
+========================= */
+
+.proposal {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+    padding: 20px;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255, 120, 170, 0.35),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(180, 80, 255, 0.3),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #1a0825,
+            #4b123f,
+            #19051f
+        );
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.floating-hearts {
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+}
+
+.floating-hearts span {
+    position: absolute;
+
+    font-size: 25px;
+
+    opacity: 0.35;
+
+    animation: floatHeart 8s linear infinite;
+}
+
+
+/* Different positions */
+
+.floating-hearts span:nth-child(1) {
+    left: 10%;
+    bottom: -50px;
+    animation-delay: 0s;
+}
+
+.floating-hearts span:nth-child(2) {
+    left: 25%;
+    bottom: -50px;
+    animation-delay: 2s;
+}
+
+.floating-hearts span:nth-child(3) {
+    left: 40%;
+    bottom: -50px;
+    animation-delay: 4s;
+}
+
+.floating-hearts span:nth-child(4) {
+    left: 55%;
+    bottom: -50px;
+    animation-delay: 1s;
+}
+
+.floating-hearts span:nth-child(5) {
+    left: 70%;
+    bottom: -50px;
+    animation-delay: 3s;
+}
+
+.floating-hearts span:nth-child(6) {
+    left: 82%;
+    bottom: -50px;
+    animation-delay: 5s;
+}
+
+.floating-hearts span:nth-child(7) {
+    left: 92%;
+    bottom: -50px;
+    animation-delay: 2.5s;
+}
+
+.floating-hearts span:nth-child(8) {
+    left: 5%;
+    bottom: -50px;
+    animation-delay: 4.5s;
+}
+
+
+@keyframes floatHeart {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.35;
+    }
+
+    80% {
+        opacity: 0.35;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(25deg);
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   PROPOSAL CARD
+========================= */
+
+.card,
+.success-card {
+    width: 100%;
+    max-width: 520px;
+
+    padding: 55px 45px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.09);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.45),
+        0 0 40px rgba(255, 80, 170, 0.12);
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Initial animation */
+
+.card {
+    animation: cardAppear 1s ease;
+}
+
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =========================
+   MAIN HEART
+========================= */
+
+.heart {
+    font-size: 75px;
+
+    margin-bottom: 20px;
+
+    filter:
+        drop-shadow(
+            0 0 18px
+            rgba(255, 80, 130, 0.8)
+        );
+
+    animation: heartbeat 1.4s infinite;
+}
+
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.15);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.12);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.small-text {
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 14px;
+}
+
+
+h1 {
+    color: white;
+
+    font-size: 48px;
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 0 15px
+        rgba(255, 120, 180, 0.5);
+}
+
+
+.message {
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    max-width: 380px;
+
+    margin: 0 auto 35px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+button {
+    border: none;
+
+    padding: 14px 32px;
+
+    border-radius: 50px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* Yes */
+
+.yes-btn {
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4f81,
+            #ff1767
+        );
+
+    box-shadow:
+        0 8px 25px
+        rgba(255, 40, 110, 0.4);
+}
+
+
+.yes-btn:hover {
+    transform: translateY(-4px) scale(1.05);
+
+    box-shadow:
+        0 12px 35px
+        rgba(255, 40, 110, 0.6);
+}
+
+
+/* No */
+
+.no-btn {
+     color: white;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    transition:
+        left 0.3s ease,
+        top 0.3s ease,
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.no-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   NO MESSAGE
+========================= */
+
+.no-message {
+    min-height: 22px;
+
+    margin-top: 22px;
+
+    color: #ff9fbd;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: opacity 0.3s ease;
+}
+
+
+/* =========================
+   HINT
+========================= */
+
+.hint {
+    margin-top: 25px;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 13px;
+
+    font-style: italic;
+}
+
+
+/* =========================
+   SUCCESS CARD
+========================= */
+
+.success-card {
+    display: none;
+
+    animation: successAppear 0.7s ease;
+}
+
+
+.success-card.show {
+    display: block;
+}
+
+
+@keyframes successAppear {
+
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* Celebration */
+
+.celebration {
+    font-size: 35px;
+
+    margin-bottom: 10px;
+
+    animation: celebrationBounce 1s ease infinite alternate;
+}
+
+
+@keyframes celebrationBounce {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-8px);
+    }
+}
+
+
+/* Success Heart */
+
+.success-heart {
+    font-size: 75px;
+
+    margin-bottom: 15px;
+
+    filter:
+        drop-shadow(
+            0 0 20px
+            rgba(255, 80, 130, 0.9)
+        );
+
+    animation: heartbeat 1.2s infinite;
+}
+
+
+/* Success Heading */
+
+.success-card h2 {
+    color: white;
+
+    font-size: 40px;
+
+    margin-bottom: 15px;
+
+    text-shadow:
+        0 0 18px
+        rgba(255, 100, 170, 0.6);
+}
+
+
+.success-card p {
+    color: rgba(255, 255, 255, 0.8);
+
+    font-size: 17px;
+
+    line-height: 1.6;
+}
+
+
+.success-message {
+    margin-top: 10px;
+}
+
+
+/* Continue */
+
+.continue-btn {
+    margin-top: 30px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #a855f7,
+            #ec4899
+        );
+
+    box-shadow:
+        0 8px 25px
+        rgba(200, 70, 220, 0.35);
+}
+
+
+.continue-btn:hover {
+    transform: translateY(-4px) scale(1.05);
+
+    box-shadow:
+        0 12px 35px
+        rgba(200, 70, 220, 0.55);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    position: absolute;
+
+    bottom: 18px;
+
+    left: 0;
+    right: 0;
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.35);
+
+    font-size: 12px;
+
+    z-index: 2;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .proposal {
+        padding: 15px;
+    }
+
+    .card,
+    .success-card {
+        padding: 45px 25px;
+    }
+
+    .heart,
+    .success-heart {
+        font-size: 60px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .success-card h2 {
+        font-size: 32px;
+    }
+
+    .message {
+        font-size: 15px;
+    }
+
+    .buttons {
+        gap: 12px;
+    }
+
+    button {
+        padding: 13px 25px;
+    }
+}
+
+
+/* =========================
+   LOVE LETTER
+========================= */
+
+.letter-card {
+    display: none;
+
+    width: 100%;
+    max-width: 600px;
+
+    padding: 50px 45px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.45),
+        0 0 45px rgba(255, 100, 180, 0.12);
+
+    position: relative;
+    z-index: 2;
+
+    animation: letterAppear 0.8s ease;
+}
+
+
+.letter-card.show {
+    display: block;
+}
+
+
+/* Letter Icon */
+
+.letter-icon {
+    font-size: 65px;
+
+    margin-bottom: 15px;
+
+    filter:
+        drop-shadow(
+            0 0 15px
+            rgba(255, 100, 170, 0.6)
+        );
+
+    animation: letterFloat 2s ease-in-out infinite;
+}
+
+
+@keyframes letterFloat {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* Small Label */
+
+.letter-label {
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 13px;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 10px;
+}
+
+
+/* Heading */
+
+.letter-card h2 {
+    color: white;
+
+    font-size: 42px;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 0 18px
+        rgba(255, 120, 180, 0.5);
+}
+
+
+/* Introduction */
+
+.letter-intro {
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    max-width: 450px;
+
+    margin: 0 auto 25px;
+}
+
+
+/* Letter Content */
+
+.letter-content {
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    transition:
+        max-height 0.8s ease,
+        opacity 0.6s ease;
+}
+
+
+.letter-content.show {
+    max-height: 500px;
+
+    opacity: 1;
+}
+
+
+.letter-content p {
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+
+/* Final Line */
+
+.letter-content .final-line {
+    color: #ff9fbd;
+
+    font-size: 19px;
+
+    font-weight: bold;
+
+    margin-top: 25px;
+}
+
+
+/* Read More */
+
+.read-more-btn {
+    margin-top: 25px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4f81,
+            #ec4899
+        );
+
+    box-shadow:
+        0 8px 25px
+        rgba(255, 60, 130, 0.35);
+}
+
+
+.read-more-btn:hover {
+    transform: translateY(-4px) scale(1.05);
+
+    box-shadow:
+        0 12px 35px
+        rgba(255, 60, 130, 0.55);
+}
+
+
+/* Letter Entrance */
+
+@keyframes letterAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .letter-card {
+        padding: 40px 25px;
+    }
+
+    .letter-icon {
+        font-size: 55px;
+    }
+
+    .letter-card h2 {
+        font-size: 34px;
+    }
+
+    .letter-intro {
+        font-size: 15px;
+    }
+
+    .letter-content p {
+        font-size: 15px;
+    }
+}
+
+
+/* =========================
+   PRANK CARD
+========================= */
+
+.prank-card {
+    display: none;
+
+    width: 100%;
+    max-width: 520px;
+
+    padding: 50px 40px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.45),
+        0 0 45px rgba(255, 100, 180, 0.15);
+
+    position: relative;
+    z-index: 2;
+
+    animation: prankAppear 0.7s ease;
+}
+
+.prank-card.show {
+    display: block;
+}
+
+.prank-emoji {
+    font-size: 70px;
+
+    margin-bottom: 15px;
+
+    animation: prankShake 0.6s ease;
+}
+
+.prank-small {
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+}
+
+.prank-card h2 {
+    color: #ff6b9d;
+
+    font-size: 55px;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 0 20px rgba(255, 70, 130, 0.7);
+}
+
+.prank-message {
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+.prank-box {
+    padding: 20px;
+
+    margin-bottom: 25px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.prank-box span {
+    font-size: 35px;
+}
+
+.prank-box p {
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-top: 10px;
+}
+
+.prank-btn {
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4f81,
+            #ec4899
+        );
+
+    box-shadow:
+        0 8px 25px
+        rgba(255, 60, 130, 0.4);
+}
+
+.prank-btn:hover {
+    transform: translateY(-4px) scale(1.05);
+
+    box-shadow:
+        0 12px 35px
+        rgba(255, 60, 130, 0.6);
+}
+
+
+@keyframes prankAppear {
+
+    from {
+        opacity: 0;
+        transform: scale(0.7) rotate(-3deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}
+
+
+@keyframes prankShake {
+
+    0%,
+    100% {
+        transform: rotate(0);
+    }
+
+    20% {
+        transform: rotate(-12deg);
+    }
+
+    40% {
+        transform: rotate(12deg);
+    }
+
+    60% {
+        transform: rotate(-8deg);
+    }
+
+    80% {
+        transform: rotate(8deg);
+    }
+}
+
+.finish-btn {
+    display: none;
+
+    margin-top: 25px;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #a855f7,
+        #ec4899
+    );
+
+    box-shadow:
+        0 8px 25px
+        rgba(200, 70, 220, 0.35);
+}
+
+.finish-btn.show {
+    display: inline-block;
+}
+
+.finish-btn:hover {
+    transform: translateY(-4px) scale(1.05);
+
+    box-shadow:
+        0 12px 35px
+        rgba(200, 70, 220, 0.55);
+}
+.prank-effect {
+    animation: screenShake 0.5s ease;
+}
+
+@keyframes screenShake {
+
+    0% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translate(-8px, 5px);
+    }
+
+    40% {
+        transform: translate(8px, -5px);
+    }
+
+    60% {
+        transform: translate(-6px, -3px);
+    }
+
+    80% {
+        transform: translate(6px, 3px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+/* final card */
+
+.final-card {
+    display: none;
+    width: 100%;
+    max-width: 520px;
+    padding: 55px 40px;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.45),
+        0 0 45px rgba(255, 100, 180, 0.15);
+
+    position: relative;
+    z-index: 2;
+    animation: finalAppear 0.8s ease;
+}
+
+.final-card.show {
+    display: block;
+}
+
+.final-emoji {
+    font-size: 75px;
+    margin-bottom: 20px;
+
+    filter: drop-shadow(0 0 20px rgba(255, 80, 130, 0.8));
+
+    animation: heartbeat 1.4s infinite;
+}
+
+.final-card h2 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 20px;
+
+    text-shadow: 0 0 18px rgba(255, 120, 180, 0.6);
+}
+
+.final-card p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.final-message {
+    margin-top: 15px;
+    color: #ff9fbd !important;
+    font-weight: bold;
+}
+
+.final-hearts {
+    margin-top: 30px;
+    font-size: 28px;
+    letter-spacing: 8px;
+
+    animation: heartsFloat 2s ease-in-out infinite;
+}
+
+@keyframes finalAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.7) translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes heartsFloat {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+    </style>
+</head>
+
+<body>
+
+    <main class="proposal">
+
+        <!-- Floating Background Hearts -->
+
+        <div class="floating-hearts">
+            <span>❤️</span>
+            <span>💕</span>
+            <span>💗</span>
+            <span>💖</span>
+            <span>❤️</span>
+            <span>💞</span>
+            <span>💗</span>
+            <span>💕</span>
+        </div>
+
+
+        <!-- Proposal Card -->
+
+        <section class="card" id="proposalCard">
+
+            <div class="heart">
+                ❤️
+            </div>
+
+            <p class="small-text">
+                I have something important to ask you...Betu
+            </p>
+
+            <h1>
+                Will You Be Mine?
+            </h1>
+
+            <p class="message">
+                Out of all the people in this world,
+                somehow my heart chose you, betu.
+            </p>
+
+
+            <!-- Buttons -->
+
+            <div class="buttons">
+
+                <button id="yesBtn" class="yes-btn">
+                    Yes ❤️
+                </button>
+
+                <button id="noBtn" class="no-btn">
+                    No 😏
+                </button>
+
+            </div>
+
+
+            <!-- Dynamic No Message -->
+
+            <p id="noMessage" class="no-message"></p>
+
+
+            <p class="hint">
+                Choose carefully, betu... 👀
+            </p>
+
+        </section>
+
+
+  
+<!-- Success Section -->
+
+<section class="success-card" id="successCard">
+
+    <div class="celebration">
+        🎉 ❤️ 🎉
+    </div>
+
+    <div class="success-heart">
+        💖
+    </div>
+
+    <h2>
+        You Said YES! ❤️
+    </h2>
+
+    <p>
+        I knew you had excellent taste, betu. 😌
+    </p>
+
+    <p class="success-message">
+        You've just made this moment a little more special.
+    </p>
+
+    <button id="continueBtn" class="continue-btn">
+        Continue →
+    </button>
+
+</section>
+
+
+<!-- Love Letter -->
+
+<section class="letter-card" id="letterCard">
+
+    <div class="letter-icon">
+        💌
+    </div>
+
+    <p class="letter-label">
+        A little something for you
+    </p>
+
+    <h2>
+        For You, betu ❤️
+    </h2>
+
+    <p class="letter-intro">
+        I don't know exactly when you became
+        so important to me...
+    </p>
+
+    <div class="letter-content" id="letterContent">
+
+        <p>
+            But somewhere along the way,
+            you became my favorite person.
+        </p>
+
+        <p>
+            Every little moment, every conversation,
+            and every smile became something
+            I wanted to remember.
+        </p>
+
+        <p>
+            And if I could choose one person
+            to share more moments with...
+        </p>
+
+        <p class="final-line">
+            I would choose you, Betu. ❤️
+        </p>
+
+    </div>
+
+    <button id="readMoreBtn" class="read-more-btn">
+        Read More →
+    </button>
+
+    <button id="finishBtn" class="finish-btn">
+        One Last Thing →
+    </button>
+
+</section>
+
+
+<!-- Prank Card -->
+
+<section class="prank-card" id="prankCard">
+
+    <div class="prank-emoji">
+        😂
+    </div>
+
+    <p class="prank-small">
+        One last thing...
+    </p>
+
+    <h2>
+        DAPPA! 💥
+    </h2>
+
+    <p class="prank-message">
+        tumko sach me laga Babu ki main tumko propose karunga? 😭
+    </p>
+
+    <div class="prank-box">
+
+        <span>🤡</span>
+        <p>Congratulations!, babu</p>
+        <p>
+            
+            Tumara to kat gaya, hahahaha....
+        </p>
+
+    </div>
+
+    <button id="prankBtn" class="prank-btn">
+        Okay, sorry 😂
+    </button>
+
+</section>
+
+
+
+
+<!-- Final Card -->
+
+<section class="final-card" id="finalCard">
+
+    <div class="final-emoji">
+        ❤️
+    </div>
+
+    <h2>
+        Okay... No More Pranks 😌
+    </h2>
+
+    <p>
+        Maybe I started this as a joke,
+        but I hope it made you smile.
+    </p>
+
+    <p class="final-message">
+        Some moments are worth remembering. ❤️
+    </p>
+
+    <div class="final-hearts">
+        💕 💖 💗 💞 💕
+    </div>
+
+</section>
+
+
+
+
+
+        <!-- Footer -->
+
+        <footer>
+            ❤️ Made with love by Rahull
+        </footer>
+
+    </main>
+
+
+    <script>
+        const yesBtn = document.querySelector("#yesBtn");
+const noBtn = document.querySelector("#noBtn");
+const noMessage = document.querySelector("#noMessage");
+
+const proposalCard = document.querySelector("#proposalCard");
+const successCard = document.querySelector("#successCard");
+const continueBtn = document.querySelector("#continueBtn");
+
+
+yesBtn.addEventListener("click", function () {
+
+    proposalCard.style.display = "none";
+
+    successCard.classList.add("show");
+
+});
+
+
+
+let noCount = 0;
+
+noBtn.addEventListener("click", function () {
+
+    noCount++;
+
+    if (noCount === 1) {
+        noMessage.textContent = "Are you sure? 🥺";
+    }
+    else if (noCount === 2) {
+        noMessage.textContent = "Think again... 👀";
+    }
+    else if (noCount === 3) {
+        noMessage.textContent = "Really? 😭";
+    }
+    else {
+        noMessage.textContent = "You can't escape 😏";
+    }
+
+});
+
+
+function moveNoButton() {
+
+    if (noCount >= 3) {
+
+        noBtn.style.position = "fixed";
+
+        let x = Math.random() * (
+            window.innerWidth - noBtn.offsetWidth - 20
+        ) + 10;
+
+        let y = Math.random() * (
+            window.innerHeight - noBtn.offsetHeight - 20
+        ) + 10;
+
+        noBtn.style.left = x + "px";
+        noBtn.style.top = y + "px";
+    }
+}
+
+
+noBtn.addEventListener("mouseenter", moveNoButton);
+
+
+noBtn.addEventListener("touchstart", function (e) {
+
+    if (noCount >= 3) {
+        e.preventDefault();
+        moveNoButton();
+    }
+
+});
+
+
+const letterCard = document.querySelector("#letterCard");
+
+continueBtn.addEventListener("click", function () {
+
+    successCard.style.display = "none";
+
+    letterCard.classList.add("show");
+
+});
+
+const readMoreBtn = document.querySelector("#readMoreBtn");
+const letterContent = document.querySelector("#letterContent");
+
+readMoreBtn.addEventListener("click", function () {
+
+    letterContent.classList.add("show");
+
+    readMoreBtn.style.display = "none";
+
+    finishBtn.classList.add("show");
+
+});
+
+
+const finishBtn = document.querySelector("#finishBtn");
+const prankCard = document.querySelector("#prankCard");
+const prankBtn = document.querySelector("#prankBtn");
+
+finishBtn.addEventListener("click", function () {
+
+    letterCard.style.display = "none";
+
+    prankCard.classList.add("show");
+
+    document.body.classList.add("prank-effect");
+
+    setTimeout(function () {
+        document.body.classList.remove("prank-effect");
+    }, 500);
+
+});
+
+
+
+const finalCard = document.querySelector("#finalCard");
+
+let forgive = false;
+
+prankBtn.addEventListener("click", function () {
+
+    if (forgive === false) {
+
+        prankCard.querySelector(".prank-message").textContent =
+            "Okay okay... maybe I actually do like you. ❤️😂";
+
+        prankBtn.textContent = "Maaf Kardo? 🥺";
+
+        forgive = true;
+
+    } else {
+
+        prankCard.style.display = "none";
+        finalCard.classList.add("show");
+
+    }
+
+});
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
